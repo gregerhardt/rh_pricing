@@ -1,0 +1,553 @@
+source,variable,table,description,data_type,logic
+processing,hh_id,hh,Household ID,numeric,NA
+processing,is_complete,hh,"Household, day, or person table record is complete",integer/categorical,NA
+passive,first_travel_date,hh,Household's first day of reporting travel,date,NA
+passive,last_travel_date,hh,Household's last day of reporting travel,date,NA
+processing,sample_segment,hh,Reported home location's sample segment,integer/categorical,NA
+processing,signup_platform,hh,Platform household used to complete the signup survey,character,NA
+processing,diary_platform,hh,Platform household used to complete the travel diary,character,NA
+processing,num_trips,hh,"Number of unlinked trips made by household, person, or person-day",numeric,NA
+processing,num_days_complete,hh,Number of days for which household/person has complete survey data,integer/categorical,NA
+processing,num_days_complete_weekday,hh,Number of weekdays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_mon,hh,Number of Mondays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_tue,hh,Number of Tuesdays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_wed,hh,Number of Wednesdays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_thu,hh,Number of Thursdays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_fri,hh,Number of Fridays for which household has complete survey data,integer/categorical,NA
+processing,num_days_complete_weekend,hh,Number of weekend days for which household has complete survey data,integer/categorical,NA
+processing,num_complete_sat,hh,Number of Saturdays for which household has complete survey data,integer/categorical,NA
+processing,num_complete_sun,hh,Number of Sundays for which household has complete survey data,integer/categorical,NA
+survey,num_people,hh,Number of people in household,integer/categorical,NA
+processing,num_surveyable,hh,Number of surveyable household members (related to Person 1),integer/categorical,NA
+processing,num_participants,hh,Number of participants in household (age 18 or over and related to person 1),integer/categorical,NA
+processing,num_adults,hh,Number of adults in household,integer/categorical,NA
+processing,num_kids,hh,Number of children in household,integer/categorical,NA
+processing,num_workers,hh,Number of workers in household,integer/categorical,NA
+processing,num_students,hh,Number of students in household,integer/categorical,NA
+survey,num_vehicles,hh,Number of vehicles available for use by household,integer/categorical,NA
+survey,num_bicycle,hh,Number of bicycles owned by household,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,bicycle_type_1,hh,Type(s) of bicycle owned by household: Standard bicycle,integer/categorical,Daily 5: If household has at least one bicycle
+survey,bicycle_type_2,hh,Type(s) of bicycle owned by household: Electric-assisted bicycle,integer/categorical,Daily 5: If household has at least one bicycle
+survey,bicycle_type_3,hh,Type(s) of bicycle owned by household: Fully electric bicycle,integer/categorical,Daily 5: If household has at least one bicycle
+survey,bicycle_type_997,hh,Type(s) of bicycle owned by household: Another type of bicycle,integer/categorical,Daily 5: If household has at least one bicycle
+survey,income_detailed,hh,Household income (detailed categories),integer/categorical,NA
+processing,income_broad,hh,Household income (broad categories),integer/categorical,NA
+survey,residence_type,hh,Household's residence type,integer/categorical,Daily 4: If rMove or (rMove for Web and person 1)
+survey,residence_rent_own,hh,Household residence ownership status,integer/categorical,Daily 4: If rMove or (rMove for Web and person 1)
+processing,home_tract_2020,hh,Household reported home location's 2020 Census tract,character,NA
+processing,sample_home_tract,hh,Sampled home location 2020 Census tract,character,NA
+processing,hh_weight,hh,Priority mode for linked trip,numeric,NA
+processing,hh_id,person,Household ID,numeric,NA
+processing,is_complete,person,"Household, day, or person table record is complete",integer/categorical,NA
+processing,num_trips,person,"Number of unlinked trips made by household, person, or person-day",numeric,NA
+processing,num_days_complete,person,Number of days for which household/person has complete survey data,integer/categorical,NA
+survey,bike_freq,person,Frequency of using a bicycle outside,integer/categorical,Daily 5
+survey,bike_store,person,Location bicycles are typically parked or stored,integer/categorical,Daily 5: If household has at least one bicycle
+processing,person_id,person,Person ID,numeric,NA
+processing,person_num,person,"Person number (Person 1 is whoever filled out the signup survey, other household members are identified in the order that erson 1 listed them in the signup survey)",numeric,NA
+processing,hh_is_complete,person,"Person, day, or trip survey from a complete household",integer/categorical,NA
+processing,is_participant,person,Person is a survey participant (18+ and related to Person 1),integer/categorical,NA
+processing,surveyable,person,Survey participant (related to primary member),integer/categorical,NA
+processing,is_proxy,person,Person is reporting travel for another household member,integer/categorical,NA
+processing,has_proxy,person,Person is having their travel reported by another household member,integer/categorical,NA
+survey,second_home,person,Person regularly spends the night at a second home,integer/categorical,If participant and has a second home
+processing,second_home_tract_2020,person,Second home location 2020 Census tract,character,If participant and has a second home
+survey,tenure,person,How long person has lived at their current residence,integer/categorical,Daily 4: If rMove or (rMove for Web and person 1)
+survey,prev_residence_type,person,Type of previous residence,integer/categorical,Daily 4: If rMove or (rMove for Web and person 1)
+survey,prev_residence_zip,person,ZIP code of previous residence,integer/categorical,"Daily 4: If rMove or (rMove for Web and person 1) and tenure is ""5 years or less"""
+survey,prev_zip,person,ZIP code of previous residence (specified),character,"Daily 4: If rMove or (rMove for Web and person 1) and tenure is ""5 years or less"" and previous residence is in the US"
+processing,prev_zip_in_region,person,Was this person's previous residence in the study area,integer/categorical,"Daily 4: If rMove or (rMove for Web and person 1) and tenure is ""5 years or less"""
+processing,num_days,person,Number of days person reported their travel,numeric,NA
+survey,relationship,person,Relationship to Person 1,integer/categorical,If household size is greater than 1
+survey,age,person,Age,integer/categorical,If participant
+survey,gender,person,Gender,integer/categorical,If participant
+survey,gender_other,person,Gender-- Other specific,character,"If responded ""Other/prefer to self-describe"" gender"
+processing,race,person,Race: Choose all that apply,integer/categorical,Daily 4
+survey,race_1,person,Race: African American or Black,integer/categorical,NA
+survey,race_2,person,Race: American Indian or Alaska Native,integer/categorical,NA
+survey,race_3,person,Race: Asian,integer/categorical,NA
+survey,race_4,person,Race: Native Hawaiian or other Pacific Islander,integer/categorical,NA
+survey,race_5,person,Race: White,integer/categorical,NA
+survey,race_997,person,Race: Other race,integer/categorical,NA
+survey,race_999,person,Race: Prefer not to answer,integer/categorical,NA
+survey,race_other,person,Race-- Other specified,character,"Daily 4: If responded ""Other"" race"
+processing,ethnicity,person,Ethnicity,integer/categorical,Daily 4
+survey,ethnicity_1,person,"Ethnicity: Not of Hispanic, Latino, or Spanish origin",integer/categorical,NA
+survey,ethnicity_2,person,"Ethnicity: Mexican, Mexican American, Chicano",integer/categorical,NA
+survey,ethnicity_3,person,Ethnicity: Puerto Rican,integer/categorical,NA
+survey,ethnicity_4,person,Ethnicity: Cuban,integer/categorical,NA
+survey,ethnicity_997,person,"Ethnicity: Another Hispanic, Latino, or Spanish origin",integer/categorical,NA
+survey,ethnicity_999,person,Ethnicity: Prefer not to answer,integer/categorical,NA
+survey,ethnicity_other,person,Ethnicity-- Other,character,"Daily 4: If responded ""Other"" ethnicity"
+survey,employment,person,Employment status,integer/categorical,If participant is age 16 or older
+survey,num_jobs,person,Number of jobs,integer/categorical,If employed full/part/furloughed/self/volunteer
+survey,job_type,person,Work location type of primary job,integer/categorical,If employed full/part/furloughed/self/volunteer
+survey,job_type_2,person,Work location type of second job,integer/categorical,If employed full/part/furloughed/self/volunteer with 2 or more jobs
+survey,job_type_3,person,Work location type of third job,integer/categorical,If employed full/part/furloughed/self/volunteer with 3 or more jobs
+processing,work_tract_2020,person,Primary work location-- 2020 Tract,character,"If employed full/part/furloughed/self/volunteer with ""only one work location"" or ""teleworks some days and travels to a work location some days"" for primary job type"
+processing,main_work_2_tract_2020,person,Second work location-- 2020 Tract,character,"If employed full/part/furloughed/self/volunteer with ""only one work location"" or ""teleworks some days and travels to a work location some days"" for primary job type"
+processing,main_work_3_tract_2020,person,Third work location-- 2020 Tract,character,"If employed full/part/furloughed/self/volunteer with ""only one work location"" or ""teleworks some days and travels to a work location some days"" for primary job type"
+survey,hours_worked,person,Number of hours worked in a week,numeric,If employed full/part/self/volunteer and work hours do not vary greatly week-to-week
+survey,work_flex,person,Person has the ability to change their work hours,integer/categorical,Daily 1: If employed full/part/self/volunteer
+survey,industry,person,Industry of primary job,integer/categorical,Daily 1: If employed = full/part/self/volunteer
+survey,occupation,person,Occupation of primary job,integer/categorical,Daily 1: If employed = full/part/self/volunteer
+survey,commute_freq,person,How often person typically commutes to their workplace,integer/categorical,"Daily 1: If employed full/part/self/volunteer and job_type IS NOT ""work only from home"" or ""Drive/bike/travel for work"""
+survey,telework_freq,person,How often person typically works remotely,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_1,person,Days teleworked in the past week: Monday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_2,person,Days teleworked in the past week: Tuesday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_3,person,Days teleworked in the past week: Wednesday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_4,person,Days teleworked in the past week: Thursday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_5,person,Days teleworked in the past week: Friday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_6,person,Days teleworked in the past week: Saturday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_7,person,Days teleworked in the past week: Sunday,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_days_8,person,Days teleworked in the past week: I did not telework last week,integer/categorical,"Daily 1: If commute_freq is not ""6-7 days a week"", or job_type is ""Work only from home"" , or telework_freq is not ""Never"""
+survey,telework_change,person,How person's telework frequency compares to one year ago,integer/categorical,Daily 1: If employed full/part/self/volunteer
+survey,telework_offered,person,Employer allows this person to work remotely,integer/categorical,"Daily 1: If telework_freq is ""Never"" or commute_freq is ""6-7 days a week"""
+survey,telework_freq_pre_covid,person,How often person typically worked remotely before March 2020,integer/categorical,Daily 1
+survey,work_home_decision,person,Person wants to live closer to where they work,integer/categorical,"Daily 1: If employed full/part/self/volunteer and job_type is not ""Only work remotely"" or ""Drive/bike/travel for work"""
+survey,work_home_decision_factor_1,person,Factors preventing this person from living closer to where they work: Cost of housing,integer/categorical,Daily 1: If wants to live closer to work
+survey,work_home_decision_factor_2,person,Factors preventing this person from living closer to where they work: Availability of housing,integer/categorical,Daily 1: If wants to live closer to work
+survey,work_home_decision_factor_3,person,Factors preventing this person from living closer to where they work: Types of housing,integer/categorical,Daily 1: If wants to live closer to work
+survey,work_home_decision_factor_4,person,Factors preventing this person from living closer to where they work: Discrimination,integer/categorical,Daily 1: If wants to live closer to work
+survey,work_home_decision_factor_5,person,Factors preventing this person from living closer to where they work: Life circumstances,integer/categorical,Daily 1: If wants to live closer to work
+survey,work_home_decision_factor_997,person,Factors preventing this person from living closer to where they work: Other,integer/categorical,Daily 1: If wants to live closer to work
+survey,volunteer_freq,person,How often person typically volunteers,integer/categorical,Daily 1: If employment is not volunteer or intern
+survey,work_mode,person,Typical mode of transportation to work,integer/categorical,"Daily 1: If commute_freq is not ""Never"" and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,work_mode_access,person,Typical mode used to access the train or bus on work commute,integer/categorical,Daily 1: If work_mode is train or bus
+survey,commute_subsidy_1,person,Commute benefits provided by employer: Free or discounted parking at work,integer/categorical,"Daily 1: If commute_freq is not ""Never"" and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,commute_subsidy_2,person,Commute benefits provided by employer: Free or discounted transit passes or fares,integer/categorical,"Daily 1: If commute_freq is not ""Never"" and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,commute_subsidy_996,person,Commute benefits provided by employer: None of the above,integer/categorical,"Daily 1: If commute_freq is not ""Never"" and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,commute_subsidy_997,person,Commute benefits provided by employer: Other,integer/categorical,"Daily 1: If commute_freq is not ""Never"" and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,parking_subsidy,person,How person's employer subsidizes their parking,integer/categorical,Daily 1: If commute_subsidy = Free or discounted parking at work
+survey,transit_subsidy,person,How person's employer subsidizes their transit commute,integer/categorical,Daily 1: If commute_subsidy = Free or discounted transit passes
+survey,commute_subsidy_other,person,How person's employer subsidizes their transit commute-- Other specified,character,"Daily 1: If responded ""Other"" to commute_subsidy, parking_subsidy or transit_subsidy"
+survey,benefit_use_1,person,Commute benefits person currently uses: Free (fully subsidized) parking at work,integer/categorical,Daily 1: If person's employer offers any commute benefits
+survey,benefit_use_2,person,Commute benefits person currently uses: Discounted (partially or pre-tax subsidized) parking at work,integer/categorical,Daily 1: If person's employer offers any commute benefits
+survey,benefit_use_3,person,Commute benefits person currently uses: Free (fully subsidized) transit passes or fares,integer/categorical,Daily 1: If person's employer offers any commute benefits
+survey,benefit_use_4,person,Commute benefits person currently uses: Discounted (partially or pre-tax subsidized) transit passes or fares,integer/categorical,Daily 1: If person's employer offers any commute benefits
+survey,benefit_use_996,person,Commute benefits person currently uses: None of the above,integer/categorical,Daily 1: If person's employer offers any commute benefits
+survey,work_walk_freq,person,How often person walked to work in the past week,integer/categorical,"Daily 1: If employed full/part/self/volunteer and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,work_bike_freq,person,How often person rode a bike or e-bike to work in the past week,integer/categorical,"Daily 1: If employed full/part/self/volunteer and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,work_carpool_freq,person,How often person carpooled to work in the past week,integer/categorical,"Daily 1: If employed full/part/self/volunteer and job_type is not ""Work only from home"" or ""Drive/bike/travel for work"""
+survey,education,person,Highest level of education completed,integer/categorical,Daily 4
+survey,student,person,Student status,integer/categorical,NA
+survey,school_type,person,School type attended,integer/categorical,If in school
+processing,school_tract_2020,person,School location Census tract 2020,character,If attends school in person
+survey,school_freq,person,How often person travels to school,integer/categorical,Daily 1: If adult student in person
+survey,remote_class_freq,person,How often person attends classes online,integer/categorical,"Daily 1: If adult student and school_freq is not ""6-7 days"", or if does online school only"
+survey,school_mode,person,Typical mode of transportation used in school commute,integer/categorical,"Daily 1: If adult student and school_freq is not ""Never"""
+survey,school_mode_driver,person,Who is typically driving this person to school,integer/categorical,"Daily 1: If school_mode is ""Household vehicle as the passenger"""
+survey,school_park_ride,person,Uses a park and ride lot at a train during school commute,integer/categorical,"Daily 1: If school_mode is ""Train"""
+survey,share_1,person,"Transportation services used in the past 12 months: Uber, Lyft, Via, or other smartphone-app ride service",integer/categorical,Daily 2
+survey,share_2,person,Transportation services used in the past 12 months: Taxi,integer/categorical,Daily 2
+survey,share_3,person,"Transportation services used in the past 12 months: Carshare (e.g., ZipCar)",integer/categorical,Daily 2
+survey,share_4,person,"Transportation services used in the past 12 months: Peer-to-peer car rental (e.g., Turo)",integer/categorical,Daily 2
+survey,share_5,person,Transportation services used in the past 12 months: Bikeshare or bike rental service,integer/categorical,Daily 2
+survey,share_6,person,Transportation services used in the past 12 months: Vanpool,integer/categorical,Daily 2
+survey,share_7,person,"Transportation services used in the past 12 months: Scooter share (e.g., Divvy, Lime)",integer/categorical,Daily 2
+survey,share_996,person,Transportation services used in the past 12 months: None of the above,integer/categorical,Daily 2
+survey,tnc_freq,person,"How often person uses Uber, Lyft, Via, or a similar app-based ride service",integer/categorical,Daily 2: If uses smartphone-app ride services
+survey,taxi_freq,person,How often person uses a taxi,integer/categorical,Daily 2: If uses taxis
+survey,bikeshare_freq,person,How often person uses a bicycle from a bikeshare program,integer/categorical,Daily 2: If uses bikeshare
+survey,bike_store_1,person,"Typical bike storage location: Inside house/apartment (includes garage, porch, storage area)",integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_2,person,Typical bike storage location: Bike rack,integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_3,person,Typical bike storage location: Bike locker,integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_4,person,Typical bike storage location: Secured bike room,integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_5,person,"Typical bike storage location: Locked to other object (e.g., post, tree)",integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_6,person,Typical bike storage location: In a parking garage/lot,integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_7,person,Typical bike storage location: Unlocked on-street,integer/categorical,Daily 5: If housheold has at least one bike
+survey,bike_store_997,person,Typical bike storage location: Other,integer/categorical,Daily 5: If housheold has at least one bike
+survey,micromobility_devices_1,person,Micromobility transportation options used: Scooter,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,micromobility_devices_2,person,Micromobility transportation options used: Moped,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,micromobility_devices_3,person,Micromobility transportation options used: Skateboard or rollerblades,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,micromobility_devices_997,person,Micromobility transportation options used: Other,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,micromobility_devices_999,person,Micromobility transportation options used: None of the above,integer/categorical,Daily 5: If rMove or (rMove for Web and person 1)
+survey,transit_freq,person,How often person typically uses transit,integer/categorical,Daily 2
+survey,transit_freq_change,person,How does person's use of transit compare to one year ago,integer/categorical,Daily 2
+survey,transit_freq_work,person,How often person uses transit for their work commute or a work-related trip,integer/categorical,"Daily 2: If employed full/part/self/volunteer, commute_freq is not ""Never"", and transit_freq is not ""Never"""
+survey,transit_pass_0,person,Does person have a multi-day or multi-trip transit pass: No,integer/categorical,Daily 2
+survey,transit_pass_1,person,"Does person have a multi-day or multi-trip transit pass: Yes, a 30-day or monthly pass",integer/categorical,Daily 2
+survey,transit_pass_2,person,"Does person have a multi-day or multi-trip transit pass: Yes, a Day Pass 5-Pack",integer/categorical,Daily 2
+survey,transit_pass_3,person,"Does person have a multi-day or multi-trip transit pass: Yes, a 7-day pass",integer/categorical,Daily 2
+survey,transit_pass_4,person,"Does person have a multi-day or multi-trip transit pass: Yes, a 3-day pass",integer/categorical,Daily 2
+survey,transit_pass_5,person,"Does person have a multi-day or multi-trip transit pass: Yes, a 1-day pass",integer/categorical,Daily 2
+survey,transit_fare_program_1,person,Free or reduced fare program(s) used: Seniors/people with disabilities ride free,integer/categorical,Daily 2
+survey,transit_fare_program_2,person,Free or reduced fare program(s) used: Seniors/people with disabilities reduced fares,integer/categorical,Daily 2
+survey,transit_fare_program_3,person,Free or reduced fare program(s) used: Medicare recipient reduced fares,integer/categorical,Daily 2
+survey,transit_fare_program_4,person,Free or reduced fare program(s) used: Access Pilot Program,integer/categorical,Daily 2
+survey,transit_fare_program_5,person,Free or reduced fare program(s) used: Military Service Pass,integer/categorical,Daily 2
+survey,transit_fare_program_6,person,Free or reduced fare program(s) used: Children ages 7-11 reduced fares,integer/categorical,Daily 2
+survey,transit_fare_program_7,person,Free or reduced fare program(s) used: School/educational reduced fare,integer/categorical,Daily 2
+survey,transit_fare_program_8,person,Free or reduced fare program(s) used: U-Pass,integer/categorical,Daily 2
+survey,transit_fare_program_996,person,Free or reduced fare program(s) used: None of the above,integer/categorical,Daily 2
+survey,transit_fare_program_997,person,Free or reduced fare program(s) used: Other,integer/categorical,Daily 2
+survey,transit_fare_program_998,person,Free or reduced fare program(s) used: Don't know,integer/categorical,Daily 2
+survey,barriers_1,person,Barriers preventing person from making a trip in the past week: Parking was too expensive,integer/categorical,Daily 2
+survey,barriers_2,person,Barriers preventing person from making a trip in the past week: Vehicle was not working,integer/categorical,Daily 2
+survey,barriers_3,person,Barriers preventing person from making a trip in the past week: Vehicle was not available,integer/categorical,Daily 2
+survey,barriers_4,person,Barriers preventing person from making a trip in the past week: Bus was not running,integer/categorical,Daily 2
+survey,barriers_5,person,Barriers preventing person from making a trip in the past week: Poor weather conditions,integer/categorical,Daily 2
+survey,barriers_6,person,Barriers preventing person from making a trip in the past week: Lack of EV charging stations,integer/categorical,Daily 2
+survey,barriers_996,person,Barriers preventing person from making a trip in the past week: Other,integer/categorical,Daily 2
+survey,barriers_997,person,Barriers preventing person from making a trip in the past week: This has not happened in the past 7 days,integer/categorical,Daily 2
+survey,barriers_999,person,Barriers preventing person from making a trip in the past week: Prefer not to answer,integer/categorical,Daily 2
+survey,problem,person,Biggest problem with transportation where person lives,integer/categorical,Daily 2
+survey,problem_other,person,Biggest problem with transportation where person lives-- Other specified,character,Daily 2: If problem = Other
+survey,limits,person,Person has felt their opportunities have been limited by their transportation options in the past year,integer/categorical,Daily 2
+survey,can_drive,person,Person can drive,integer/categorical,NA
+survey,vehicle,person,Vehicle driven most often,integer/categorical,Daily 3: If household has 1+ vehicles and person drives
+survey,home_vehicle_park,person,Where household vehicle(s) are typically parked at home,integer/categorical,Daily 3: If household has 1+ vehicles and person drives; if rMove or (rMove for Web and person 1)
+survey,home_vehicle_park_space,person,Person has an assigned parking spot at home,integer/categorical,Daily 3: If parks in a parking lot/garage
+survey,home_vehicle_park_pay,person,Person pays to park their vehicle(s) at home,integer/categorical,Daily 3: If household has 1+ vehicles and person drives; if rMove or (rMove for Web and person 1)
+survey,ev_typical_charge_1,person,Where person charges their electric vehicle(s): At home,integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_2,person,Where person charges their electric vehicle(s): At work,integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_3,person,"Where person charges their electric vehicle(s): At a commute location (e.g., Park and Ride lot, parking garage)",integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_4,person,"Where person charges their electric vehicle(s): At a shopping location (e.g., grocery store, shopping mall)",integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_5,person,"Where person charges their electric vehicle(s): At a public location (e.g., hospital, library, government building)",integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_6,person,Where person charges their electric vehicle(s): At a hotel/inn,integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_996,person,Where person charges their electric vehicle(s): Other,integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_typical_charge_997,person,Where person charges their electric vehicle(s): I don't charge my plug-in EV,integer/categorical,Daily 3: If household has an EV or PHEV
+survey,ev_purchase_barrier,person,I feel that the availability of charging stations near my home discourages me from purchasing as electric vehicle,integer/categorical,Daily 3: If household has 1+ vehicles and person drives; if rMove or (rMove for Web and person 1).
+survey,disability,person,"Person has a condition, impairment, or disability that affects their travel or that requires special equipment or devices",integer/categorical,Daily 4
+survey,disability_travel_1,person,How often person has trouble using transportation,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_travel_1_mode_1,person,Type(s) of transportation person has trouble using: Sidewalks or crosswalks when walking (or jogging/using a wheelchair),integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_2,person,"Type(s) of transportation person has trouble using: Bus (CTA, PACE, other service provider)",integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_3,person,"Type(s) of transportation person has trouble using: Train (CTA, METRA, NICTD)",integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_4,person,Type(s) of transportation person has trouble using: Carpool/vanpool,integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_5,person,Type(s) of transportation person has trouble using: Dial-a-Ride,integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_6,person,Type(s) of transportation person has trouble using: Call-n-Ride,integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_7,person,Type(s) of transportation person has trouble using: Paratransit,integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_8,person,Type(s) of transportation person has trouble using: Private shuttle bus,integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_mode_9,person,"Type(s) of transportation person has trouble using: Uber/Lyft/Via, taxi, or car service",integer/categorical,"Daily 4: If disability_travel_1 is not ""Never"""
+survey,disability_travel_1_why_1,person,Why person has trouble using public transportation: Difficulty getting to or from public transportation stations/stops,integer/categorical,"Daily 4: If disability_travel_1_mode is bus, train, or paratransit"
+survey,disability_travel_1_why_2,person,Why person has trouble using public transportation: Difficulty while waiting at public transportation stations/stops,integer/categorical,"Daily 4: If disability_travel_1_mode is bus, train, or paratransit"
+survey,disability_travel_1_why_3,person,Why person has trouble using public transportation: Difficulty while onboard public transportation,integer/categorical,"Daily 4: If disability_travel_1_mode is bus, train, or paratransit"
+survey,disability_travel_1_why_997,person,Why person has trouble using public transportation: Other,integer/categorical,"Daily 4: If disability_travel_1_mode is bus, train, or paratransit"
+survey,disability_travel_2,person,"Has a lack of transportation kept person from medical appointments, social activities, leisure, exercise or other travel?",integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_1,person,Type of disability: Physical-related disability,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_2,person,Type of disability: Vision-related disability,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_3,person,Type of disability: Hearing-related disability,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_4,person,Type of disability: Cognitive/language/learning-related disability,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_5,person,Type of disability: Psychiatric disability/mental health,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_997,person,Type of disability: Other,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_1_999,person,Type of disability: Prefer not to answer,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_1,person,Travel assistance used: Cane,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_2,person,Travel assistance used: Walker,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_3,person,Travel assistance used: White cane,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_4,person,Travel assistance used: Seeing-eye dog or other K-9 assistance,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_5,person,Travel assistance used: Crutches,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_6,person,Travel assistance used: Motorized scooter,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_7,person,Travel assistance used: Manual wheelchair,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_8,person,Travel assistance used: Motorized wheelchair,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_9,person,"Travel assistance used: A companion, caregiver, or aid",integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_10,person,Travel assistance used: Something else,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_996,person,Travel assistance used: None of the above,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_998,person,Travel assistance used: Don't know,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_type_2_999,person,Travel assistance used: Prefer not to answer,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_transit_1_ask,person,Does person request accommodations when using public transportation?,integer/categorical,"Daily 4: If disability = ""Yes"""
+survey,disability_transit_1_type_1,person,Type of accommodation requested when using public transportation: Reading/navigating signs,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_1_type_2,person,Type of accommodation requested when using public transportation: Ramp,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_1_type_3,person,Type of accommodation requested when using public transportation: Accessible seat,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_1_type_4,person,Type of accommodation requested when using public transportation: Boarding assistance,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_1_type_997,person,Type of accommodation requested when using public transportation: Other,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_1,person,Does the transit agency primarily used by this person provide accomodations when needed?,integer/categorical,"Daily 4: If disability_transit_1_ask is not ""Never"""
+survey,disability_transit_2,person,Satisfaction with accommodations received for traveling independently,integer/categorical,"Daily 4: If disability =  ""Yes"" and transit_freq is not ""Never"""
+survey,participate,person,Willing to participate in future studies,integer/categorical,Daily 2
+survey,feedback_web,person,Open-ended survey feedback,character,Daily 7
+processing,person_type,person,Person classification used for trip and tour imputation,integer/categorical,NA
+processing,person_weight,person,Priority mode for linked trip,numeric,NA
+processing,hh_id,vehicle,Household ID,numeric,NA
+processing,hh_weight,vehicle,Priority mode for linked trip,numeric,NA
+processing,vehicle_id,vehicle,Vehicle ID,numeric,NA
+processing,vehicle_num,vehicle,Vehicle number,numeric,NA
+survey,make,vehicle,Vehicle make,character,NA
+survey,model,vehicle,Vehicle model,character,NA
+survey,other,vehicle,Other vehicle details,character,NA
+survey,year,vehicle,Vehicle year,integer/categorical,NA
+survey,fuel_type,vehicle,Vehicle fuel type,integer/categorical,NA
+survey,fuel_type_other,vehicle,Vehicle fuel type-- Other specified,character,NA
+processing,hh_id,day,Household ID,numeric,NA
+processing,is_complete,day,"Household, day, or person table record is complete",integer/categorical,NA
+processing,num_trips,day,"Number of unlinked trips made by household, person, or person-day",numeric,NA
+processing,person_id,day,Person ID,numeric,NA
+processing,person_num,day,"Person number (Person 1 is whoever filled out the signup survey, other household members are identified in the order that erson 1 listed them in the signup survey)",numeric,NA
+processing,hh_is_complete,day,"Person, day, or trip survey from a complete household",integer/categorical,NA
+processing,is_participant,day,Person is a survey participant (18+ and related to Person 1),integer/categorical,NA
+processing,surveyable,day,Survey participant (related to primary member),integer/categorical,NA
+processing,day_id,day,Day ID,numeric,NA
+processing,day_num,day,Number of day in person's travel period,numeric,NA
+passive,travel_date,day,Date of travel,date,NA
+processing,travel_dow,day,Travel day of week,integer/categorical,NA
+processing,hh_day_complete,day,Household day is complete,integer/categorical,NA
+processing,num_complete_trip_surveys,day,Number of complete trip surveys,numeric,NA
+processing,summary_complete,day,Summary survey is complete,integer/categorical,NA
+processing,proxy_complete,day,Proxy survey is complete,integer/categorical,If has proxy
+survey,begin_day,day,Where participant began their day,integer/categorical,If rMove
+survey,end_day,day,Where participant ended their day,integer/categorical,If rMove
+survey,school_daily,day,Did this person travel to school today,integer/categorical,If person attends in-person school or daycare at least some of the time
+survey,attend_school_1,day,"Did this person travel to school or daycare today: Yes, person traveled to school",integer/categorical,If person attends in-person school or daycare at least some of the time AND school was not selected as a purpose on travel day thus far for a trip added to this child's roster (copied trips are not checked).
+survey,attend_school_2,day,"Did this person travel to school or daycare today: Yes, person traveled to another location for school (e.g., friend's house, parent's work)",integer/categorical,If person attends in-person school or daycare at least some of the time AND school was not selected as a purpose on travel day thus far for a trip added to this child's roster (copied trips are not checked).
+survey,attend_school_3,day,"Did this person travel to school or daycare today: No, person did not travel for school",integer/categorical,If person attends in-person school or daycare at least some of the time AND school was not selected as a purpose on travel day thus far for a trip added to this child's roster (copied trips are not checked).
+survey,attend_school_998,day,Did this person travel to school or daycare today: Don't know,integer/categorical,If person attends in-person school or daycare at least some of the time AND school was not selected as a purpose on travel day thus far for a trip added to this child's roster (copied trips are not checked).
+survey,attend_school_999,day,Did this person travel to school or daycare today: Prefer not to answer,integer/categorical,If person attends in-person school or daycare at least some of the time AND school was not selected as a purpose on travel day thus far for a trip added to this child's roster (copied trips are not checked).
+survey,attend_school_no_1,day,Reason for not attending school today: Person was sick or quarantining,integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_2,day,Reason for not attending school today: Person attended class online from home,integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_3,day,"Reason for not attending school today: Person attended class online from another location (e.g., friend's)",integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_4,day,"Reason for not attending school today: School was scheduled to be closed (e.g., vacation, holiday)",integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_5,day,"Reason for not attending school today: School was closed or adjusted due to weather event (e.g., snow day)",integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_6,day,Reason for not attending school today: Other,integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_998,day,Reason for not attending school today: Don't know,integer/categorical,If did not attend school or daycare on travel day
+survey,attend_school_no_999,day,Reason for not attending school today: Prefer not to answer,integer/categorical,If did not attend school or daycare on travel day
+survey,telecommute_time,day,Time spent working at home or teleworking for pay today,integer/categorical,Daily Core: If employed full/part/self/volunteer
+survey,delivery_2,day,Which of the following occurred today: Ordered food for delivery,integer/categorical,Daily Core: If rMove or (rMove for Web and person 1)
+survey,delivery_4,day,Which of the following occurred today: Shopped online (including online groceries),integer/categorical,Daily Core: If rMove or (rMove for Web and person 1)
+survey,delivery_5,day,Which of the following occurred today: Had a package delivered to home,integer/categorical,Daily Core: If rMove or (rMove for Web and person 1)
+survey,delivery_8,day,Which of the following occurred today: Socialized online,integer/categorical,Daily Core: If rMove or (rMove for Web and person 1)
+survey,delivery_996,day,Which of the following occurred today: None of the above,integer/categorical,Daily Core: If rMove or (rMove for Web and person 1)
+survey,no_travel_1,day,Why didn't person go anywhere today: I did make trips today,integer/categorical,Daily Core: If made zero trips
+survey,no_travel_2,day,Why didn't person go anywhere today: Not scheduled to work,integer/categorical,Daily Core: If made zero trips
+survey,no_travel_3,day,"Why didn't person go anywhere today: Worked at home for pay (e.g., teleworked)",integer/categorical,Daily Core: If made zero trips
+survey,no_travel_4,day,Why didn't person go anywhere today: Hung out/worked around home (not for pay),integer/categorical,Daily Core: If made zero trips
+survey,no_travel_5,day,"Why didn't person go anywhere today: Scheduled school closure (e.g., holiday)",integer/categorical,Daily Core: If made zero trips
+survey,no_travel_6,day,"Why didn't person go anywhere today: No available transportation (e.g., no car, no bus)",integer/categorical,Daily Core: If made zero trips
+survey,no_travel_7,day,Why didn't person go anywhere today: Sick or quarantining (self or others),integer/categorical,Daily Core: If made zero trips
+survey,no_travel_8,day,"Why didn't person go anywhere today: Waited for visitor/delivery (e.g., plumber)",integer/categorical,Daily Core: If made zero trips
+survey,no_travel_9,day,Why didn't person go anywhere today: Kids did online/remote/home school,integer/categorical,Daily Core: If made zero trips
+survey,no_travel_11,day,"Why didn't person go anywhere today: Weather conditions (e.g., snowstorm)",integer/categorical,Daily Core: If made zero trips
+survey,no_travel_12,day,Why didn't person go anywhere today: Vacation or persol day,integer/categorical,Daily Core: If made zero trips
+survey,no_travel_13,day,Why didn't person go anywhere today: Home-bound elderly or disabled,integer/categorical,Daily Core: If made zero trips
+survey,no_travel_99,day,Why didn't person go anywhere today: Other reason,integer/categorical,Daily Core: If made zero trips
+survey,typical_day,day,Was this a typical day,integer/categorical,Daily Core
+survey,typical_day_no,day,What was unusual about this day,character,"Daily Core: If typical_day = ""No"""
+processing,daily_activity_pattern,day,Was a mandatory trip made on this day,integer/categorical,NA
+processing,day_weight,day,Priority mode for linked trip,numeric,NA
+processing,hh_id,trip_unlinked,Household ID,numeric,NA
+passive,first_travel_date,trip_unlinked,Household's first day of reporting travel,date,NA
+passive,last_travel_date,trip_unlinked,Household's last day of reporting travel,date,NA
+processing,person_id,trip_unlinked,Person ID,numeric,NA
+processing,person_num,trip_unlinked,"Person number (Person 1 is whoever filled out the signup survey, other household members are identified in the order that erson 1 listed them in the signup survey)",numeric,NA
+processing,hh_is_complete,trip_unlinked,"Person, day, or trip survey from a complete household",integer/categorical,NA
+processing,day_id,trip_unlinked,Day ID,numeric,NA
+processing,day_num,trip_unlinked,Number of day in person's travel period,numeric,NA
+passive,travel_date,trip_unlinked,Date of travel,date,NA
+processing,travel_dow,trip_unlinked,Travel day of week,integer/categorical,NA
+processing,hh_day_complete,trip_unlinked,Household day is complete,integer/categorical,NA
+processing,trip_id,trip_unlinked,Trip ID,numeric,NA
+processing,trip_num,trip_unlinked,Trip number,numeric,NA
+processing,day_is_complete,trip_unlinked,Travel day is complete (all trip surveys and the daily survey are complete),integer/categorical,NA
+processing,trip_survey_complete,trip_unlinked,Trip survey is complete,integer/categorical,NA
+processing,joint_trip_id,trip_unlinked,Joint trip ID,numeric,NA
+processing,joint_trip_num,trip_unlinked,Joint trip number,character,NA
+passive,depart_date,trip_unlinked,"Date of trip departure (converted to CDT or CST, as appropriate)",date,NA
+passive,depart_dow,trip_unlinked,Day of week of trip departure,integer/categorical,NA
+passive,depart_hour,trip_unlinked,"Hour of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,depart_minute,trip_unlinked,"Minute of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,depart_seconds,trip_unlinked,"Second of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_date,trip_unlinked,"Date of trip arrival (converted to CDT or CST, as appropriate)",date,NA
+passive,arrive_dow,trip_unlinked,Day of week of trip arrival,integer/categorical,NA
+passive,arrive_hour,trip_unlinked,"Hour of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_minute,trip_unlinked,"Minute of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_second,trip_unlinked,"Second of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+processing,distance_meters,trip_unlinked,Trip or tour distance (meters),numeric,"Trace distance for rMove trips, routed distance for online or manually added trips"
+processing,distance_miles,trip_unlinked,Trip or tour distance (miles),numeric,"Trace distance for rMove trips, routed distance for online or manually added trips"
+passive,distance_meters_app,trip_unlinked,Trace distance of the trip (meters),numeric,If rMove participant and this trip was not manually added by participant
+processing,distance_beeline,trip_unlinked,Straightline distance from the trip origin to the trip destination (meters),numeric,NA
+processing,duration_seconds,trip_unlinked,Trip duration (seconds),numeric,NA
+processing,duration_minutes,trip_unlinked,Trip duration (minutes),numeric,NA
+processing,dwell_mins,trip_unlinked,Dwell time spent at destination (minutes),numeric,NA
+processing,speed_mph,trip_unlinked,Average trip speed (mph),numeric,NA
+processing,flag_speed,trip_unlinked,Flag: outlier for trip speed,integer/categorical,NA
+processing,flag_distance,trip_unlinked,Flag: outlier for trip distance,integer/categorical,NA
+processing,flag_duration,trip_unlinked,Flag: outlier for trip duration,integer/categorical,NA
+processing,o_in_region,trip_unlinked,Trip origin is in the study region,integer/categorical,NA
+processing,o_tract_2020,trip_unlinked,Trip origin Census tract 2020,character,NA
+processing,o_location_type,trip_unlinked,Trip origin type of location,integer/categorical,NA
+processing,d_in_region,trip_unlinked,Trip destination is in the study region,integer/categorical,NA
+processing,d_tract_2020,trip_unlinked,Trip destination Census tract 2020,character,NA
+processing,d_location_type,trip_unlinked,Trip destination type of location,integer/categorical,NA
+survey,mode_1,trip_unlinked,Trip mode 1,integer/categorical,NA
+survey,mode_2,trip_unlinked,Trip mode 2,integer/categorical,If used more than 1 mode
+survey,mode_3,trip_unlinked,Trip mode 3,integer/categorical,If used more than 2 modes
+survey,mode_4,trip_unlinked,Trip mode 4,integer/categorical,If used more than 3 modes
+survey,mode_5,trip_unlinked,Trip mode 5,integer/categorical,If used more than 4 modes
+survey,mode_6,trip_unlinked,Trip mode 6,integer/categorical,If used more than 5 modes
+survey,mode_other_specify,trip_unlinked,Other trip mode specified,character,"If mode_other = ""Other"""
+processing,mode_priority,trip_unlinked,Priority trip mode,integer/categorical,NA
+processing,mode_type,trip_unlinked,Type of trip's priority mode,integer/categorical,NA
+survey,transit_access,trip_unlinked,Mode used to access first transit stop on the trip,integer/categorical,"If mode = ""Public transit"""
+survey,transit_egress,trip_unlinked,Mode used to leave last transit stop on the trip,integer/categorical,"If mode = ""Public transit"""
+survey,transit_veh_avail,trip_unlinked,Was a household vehicle available to you when you chose to use public transit for this trip?,integer/categorical,"If mode = ""Public transit"" and households has 1+ vehicles"
+survey,toll,trip_unlinked,Did person pay any tolls on this trip?,integer/categorical,"If mode or transit_access or transit_egress = ""Household vehicle"" or ""Other vehicle"" or ""Carpool/vanpool"""
+survey,tollway_1,trip_unlinked,Tollway(s) used on this trip: Illinois Tollway,integer/categorical,"If toll = ""Yes"""
+survey,tollway_2,trip_unlinked,Tollway(s) used on this trip: Chicago Skyway,integer/categorical,"If toll = ""Yes"""
+survey,tollway_3,trip_unlinked,Tollway(s) used on this trip: Indiana Toll Road,integer/categorical,"If toll = ""Yes"""
+survey,tollway_997,trip_unlinked,Tollway(s) used on this trip: Other,integer/categorical,"If toll = ""Yes"""
+survey,tollway_998,trip_unlinked,Tollway(s) used on this trip: Don't know,integer/categorical,"If toll = ""Yes"""
+survey,park_location,trip_unlinked,Where vehicle was parked on this trip,integer/categorical,"If mode or transit_access or transit_egress = ""Household vehicle"" or ""Other vehicle"""
+survey,park_type,trip_unlinked,How did you pay to park on this trip?,integer/categorical,"If vehicle_park_loc is not ""Didn't park"""
+survey,park_pay,trip_unlinked,Interval of parking payment,integer/categorical,"If vehicle_park_type is not ""Free parking"""
+survey,park_cost_hour,trip_unlinked,Parking cost per hour,numeric,If paid to park
+survey,park_cost_day,trip_unlinked,Parking cost per day,numeric,If paid to park
+survey,park_cost_week,trip_unlinked,Parking cost per week,numeric,If paid to park
+survey,park_cost_month,trip_unlinked,Parking cost per month,numeric,If paid to park
+survey,park_cost_semester,trip_unlinked,Parking cost per semester,numeric,If paid to park
+survey,park_cost_year,trip_unlinked,Parking cost per year,numeric,If paid to park
+survey,ev_charge_station,trip_unlinked,EV charging available at destination,integer/categorical,If used household electric vehicle on trip
+survey,ev_charge_station_level_1,trip_unlinked,Level of EV charging station at destination: Level 1 (2-5 miles of range per 1 hour of charging),integer/categorical,If EV charge stations were at destination
+survey,ev_charge_station_level_2,trip_unlinked,Level of EV charging station at destination: Level 2 (10-20 miles of range per 1 hour of charging),integer/categorical,If EV charge stations were at destination
+survey,ev_charge_station_level_3,trip_unlinked,Level of EV charging station at destination: Level 3/DC Fast (60+ miles of range per 1 hour of charging),integer/categorical,If EV charge stations were at destination
+survey,ev_charge_station_level_998,trip_unlinked,Level of EV charging station at destination: Don't know,integer/categorical,If EV charge stations were at destination
+survey,ev_charge_station_decision,trip_unlinked,I decided to stop here because there were electric vehicle charging stations,integer/categorical,If used EV charge station at destination and destination is not home/work/school location
+survey,tnc_type,trip_unlinked,What type of smartphone app ride service was used on this trip,integer/categorical,"If mode_taxi = ""Uber/Lyft/Via"""
+survey,taxi_type,trip_unlinked,Who paid for this trip?,integer/categorical,"If mode or transit_access or transit_egress = ""Uber/Lyft/Via, taxi, or car service"""
+survey,taxi_cost,trip_unlinked,Amount paid for taxi,numeric,If knows amount paid for taxi
+survey,num_routes,trip_unlinked,Number of different buses/trains used on trip,integer/categorical,"If mode or transit_access or transit_egress = ""Public transit"""
+survey,mode_transit_1,trip_unlinked,Transit agency for first transit leg of trip,integer/categorical,If num_routes >= 1
+survey,mode_transit_route_1,trip_unlinked,Transit route for first transit leg of trip,integer/categorical,"If mode_transit1 = ""CTA bus"", ""PACE bus"", ""CTA L train"", or ""METRA commuter rail"""
+survey,mode_train_access_1,trip_unlinked,Station used to access first transit leg of trip,integer/categorical,"If first mode is CTA, Metra, or NICTD rail"
+survey,mode_train_egress_1,trip_unlinked,Station used to exit first transit leg of trip,integer/categorical,"If first mode is CTA, Metra, or NICTD rail"
+processing,mode_bus_access_1,trip_unlinked,Stop ID for first bus access stop,character,If used a bus on the trip
+processing,mode_bus_egress_1,trip_unlinked,Stop ID for first bus egress stop,character,If used a bus on the trip
+survey,transit_type_1,trip_unlinked,Type of ticket used for first transit leg,integer/categorical,If num_routes >= 1
+survey,mode_transit_2,trip_unlinked,Transit agency for second transit leg of trip,integer/categorical,If num_routes >= 2
+survey,mode_transit_route_2,trip_unlinked,Transit route for second transit leg of trip,integer/categorical,"If mode_transit2 = ""CTA bus"", ""PACE bus"", ""CTA L train"", or ""METRA commuter rail"""
+survey,mode_train_access_2,trip_unlinked,Station used to access second transit leg of trip,integer/categorical,"If second mode is CTA, Metra, or NICTD rail"
+survey,mode_train_egress_2,trip_unlinked,Station used to exit second transit leg of trip,integer/categorical,"If second mode is CTA, Metra, or NICTD rail"
+processing,mode_bus_access_2,trip_unlinked,Stop ID for second bus access stop,character,If used 2+ buses on the trip
+processing,mode_bus_egress_2,trip_unlinked,Stop ID for second bus egress stop,character,If used 2+ buses on the trip
+survey,transit_type_2,trip_unlinked,Type of ticket used for second transit leg,integer/categorical,If num_routes >= 2
+survey,mode_transit_3,trip_unlinked,Transit agency for third transit leg of trip,integer/categorical,If num_routes >= 3
+survey,mode_transit_route_3,trip_unlinked,Transit route for third transit leg of trip,integer/categorical,"If mode_transit3 = ""CTA bus"", ""PACE bus"", ""CTA L train"", or ""METRA commuter rail"""
+survey,mode_train_access_3,trip_unlinked,Station used to access third transit leg of trip,integer/categorical,"If third mode is CTA, Metra, or NICTD rail"
+survey,mode_train_egress_3,trip_unlinked,Station used to exit third transit leg of trip,integer/categorical,"If third mode is CTA, Metra, or NICTD rail"
+processing,mode_bus_access_3,trip_unlinked,Stop ID for third bus access stop,character,If used 3+ buses on the trip
+processing,mode_bus_egress_3,trip_unlinked,Stop ID for third bus egress stop,character,If used 3+ buses on the trip
+survey,transit_type_3,trip_unlinked,Type of ticket used for third transit leg,integer/categorical,If num_routes >= 3
+survey,mode_transit_4,trip_unlinked,Transit agency for fourth transit leg of trip,integer/categorical,If num_routes = 4
+survey,mode_transit_route_4,trip_unlinked,Transit route for fourth transit leg of trip,integer/categorical,"If mode_transit4 = ""CTA bus"", ""PACE bus"", ""CTA L train"", or ""METRA commuter rail"""
+survey,mode_train_access_4,trip_unlinked,Station used to access fourth transit leg of trip,integer/categorical,"If fourth mode is CTA, Metra, or NICTD rail"
+survey,mode_train_egress_4,trip_unlinked,Station used to exit fourth transit leg of trip,integer/categorical,"If fourth mode is CTA, Metra, or NICTD rail"
+processing,mode_bus_access_4,trip_unlinked,Stop ID for fourth bus access stop,character,If used 4+ buses on the trip
+processing,mode_bus_egress_4,trip_unlinked,Stop ID for fourth bus egress stop,character,If used 4+ buses on the trip
+survey,transit_type_4,trip_unlinked,Type of ticket used for fourth transit leg,integer/categorical,If num_routes = 4
+survey,transit_cost,trip_unlinked,Cost of the total transit fare for this trip,numeric,If knows the total transit fare for this trip
+survey,taxi_pay,trip_unlinked,Amount paid for taxi,integer/categorical,If used a taxi on the trip
+survey,transit_pay,trip_unlinked,Total amount paid for transit fare,integer/categorical,If used transit on the trip
+survey,bike_park_location,trip_unlinked,Where was the bicycle parked?,integer/categorical,"If mode or transit_access or transit_egress = ""Bicycle"""
+survey,scooter_park_location,trip_unlinked,"Where was the scooter, moped, or skateboard parked?",integer/categorical,"If mode or transit_access or transit_egress = ""Micromobility"""
+processing,num_travelers,trip_unlinked,Total number of people in travel party (maximum at any given point in the tour table),integer/categorical,NA
+processing,num_hh_travelers,trip_unlinked,Number of household members in travel party (maximum at any given point in the tour table),integer/categorical,if household size > 1
+survey,num_non_hh_travelers,trip_unlinked,Number of non-household members in travel party,integer/categorical,NA
+survey,hh_member_1,trip_unlinked,Household member 1 was on this trip,integer/categorical,NA
+survey,hh_member_2,trip_unlinked,Household member 2 was on this trip,integer/categorical,if household size > 1
+survey,hh_member_3,trip_unlinked,Household member 3 was on this trip,integer/categorical,if household size > 2
+survey,hh_member_4,trip_unlinked,Household member 4 was on this trip,integer/categorical,if household size > 3
+survey,hh_member_5,trip_unlinked,Household member 5 was on this trip,integer/categorical,if household size > 4
+survey,hh_member_6,trip_unlinked,Household member 6 was on this trip,integer/categorical,if household size > 5
+survey,hh_member_7,trip_unlinked,Household member 7 was on this trip,integer/categorical,if household size > 6
+survey,hh_member_8,trip_unlinked,Household member 8 was on this trip,integer/categorical,if household size > 7
+survey,hh_member_9,trip_unlinked,Household member 9 was on this trip,integer/categorical,if household size > 8
+survey,hh_member_10,trip_unlinked,Household member 10 was on this trip,integer/categorical,if household size > 9
+survey,driver,trip_unlinked,Were you the driver or passenger on this trip?,integer/categorical,"If mode or transit_access or transit_egress = ""Household vehicle"" or ""Other vehicle"", and travel party has 2+ travelers over 16"
+processing,o_purpose,trip_unlinked,Origin trip purpose (processed response),integer/categorical,NA
+processing,o_purpose_reported,trip_unlinked,Origin trip purpose (original response),integer/categorical,NA
+processing,o_purpose_category,trip_unlinked,Origin trip purpose category (processed response),integer/categorical,NA
+processing,o_purpose_category_reported,trip_unlinked,Origin trip purpose category (original response),integer/categorical,NA
+processing,d_purpose,trip_unlinked,Destition trip purpose (processed response),integer/categorical,NA
+survey,d_purpose_reported,trip_unlinked,Destition trip purpose (original response),integer/categorical,NA
+processing,d_purpose_category,trip_unlinked,Destition trip purpose category (processed response),integer/categorical,NA
+processing,d_purpose_category_reported,trip_unlinked,Destition trip purpose category (original response),integer/categorical,NA
+survey,d_purpose_other,trip_unlinked,Destition trip purpose-- Other specified,character,NA
+survey,ontime_imp,trip_unlinked,Importance of being on time when arriving at the destination,integer/categorical,If person_num = 1
+survey,ontime_imp_why_1,trip_unlinked,Reason(s) for importance of being on time: Had work/school or a job interview,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_2,trip_unlinked,Reason(s) for importance of being on time: Had an appointment or was meeting someone,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_3,trip_unlinked,Reason(s) for importance of being on time: Was attending an event that was important to me,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_4,trip_unlinked,"Reason(s) for importance of being on time: There was a fine, fee, or penalty for being late",integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_5,trip_unlinked,"Reason(s) for importance of being on time: Needed to catch a ride, bus, train, or flight",integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_6,trip_unlinked,Reason(s) for importance of being on time: Believes it is important to be on time,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_why_997,trip_unlinked,Reason(s) for importance of being on time: Other,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_1,trip_unlinked,Action(s) taken to ensure being on time: Left earlier to allow extra time,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_2,trip_unlinked,Action(s) taken to ensure being on time: Took a different route,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_3,trip_unlinked,"Action(s) taken to ensure being on time: Took a different form of transportation (e.g., drove instead of taking public transportation)",integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_4,trip_unlinked,Action(s) taken to ensure being on time: Used a toll road,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_5,trip_unlinked,"Action(s) taken to ensure being on time: Chose to make this trip at a different time of day (e.g., to avoid rush hour)",integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+survey,ontime_imp_action_6,trip_unlinked,Action(s) taken to ensure being on time: Did not make any changes to my travel behavior to ensure I would arrive on time,integer/categorical,"If ontime_imp = ""Very"" or ""Extremely"""
+processing,n_legs,trip_unlinked,Number of legs,numeric,NA
+processing,leg_num,trip_unlinked,Leg number,numeric,NA
+processing,first_leg,trip_unlinked,First leg,integer/categorical,NA
+processing,last_leg,trip_unlinked,Last leg,integer/categorical,NA
+processing,is_transit_leg,trip_unlinked,Is transit leg,integer/categorical,NA
+processing,is_transit,trip_unlinked,Is a transit trip,integer/categorical,NA
+processing,is_access,trip_unlinked,Flag: transit trip quality issue,integer/categorical,NA
+processing,is_egress,trip_unlinked,Is egress leg,integer/categorical,NA
+processing,has_access,trip_unlinked,Has access leg,integer/categorical,NA
+processing,has_synthetic_access,trip_unlinked,Has synthetic access leg,integer/categorical,NA
+processing,has_egress,trip_unlinked,Has egress leg,integer/categorical,NA
+processing,has_synthetic_egress,trip_unlinked,Has synthetic egress leg,integer/categorical,NA
+processing,transit_quality_flag,trip_unlinked,Flag: transit trip quality issue,integer/categorical,NA
+processing,imputed_record_type,trip_unlinked,"Indicates whether and, if so, how a trip was imputed",integer/categorical,NA
+processing,imputed_host_trip,trip_unlinked,The original trip ID from which this trip was imputed,numeric,If imputed from a non-proxy trip
+processing,imputed_joint_trip,trip_unlinked,Indicates whether the trip is an imputed joint trip,integer/categorical,NA
+processing,trip_weight,trip_unlinked,Priority mode for linked trip,numeric,NA
+processing,linked_trip_id,trip_unlinked,Linked trip ID,numeric,NA
+processing,linked_trip_num,trip_unlinked,Linked trip number,numeric,NA
+processing,tour_id,trip_unlinked,Tour ID,numeric,NA
+processing,tour_num,trip_unlinked,Tour number,numeric,NA
+processing,hh_id,trip_linked,Household ID,numeric,NA
+processing,person_id,trip_linked,Person ID,numeric,NA
+processing,person_num,trip_linked,"Person number (Person 1 is whoever filled out the signup survey, other household members are identified in the order that erson 1 listed them in the signup survey)",numeric,NA
+processing,day_id,trip_linked,Day ID,numeric,NA
+processing,day_num,trip_linked,Number of day in person's travel period,numeric,NA
+processing,joint_trip_id,trip_linked,Joint trip ID,numeric,NA
+processing,joint_trip_num,trip_linked,Joint trip number,character,NA
+passive,depart_date,trip_linked,"Date of trip departure (converted to CDT or CST, as appropriate)",date,NA
+passive,depart_hour,trip_linked,"Hour of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,depart_minute,trip_linked,"Minute of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,depart_seconds,trip_linked,"Second of trip departure (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_date,trip_linked,"Date of trip arrival (converted to CDT or CST, as appropriate)",date,NA
+passive,arrive_hour,trip_linked,"Hour of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_minute,trip_linked,"Minute of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+passive,arrive_second,trip_linked,"Second of trip arrival (converted to CDT or CST, as appropriate)",numeric,NA
+processing,distance_meters,trip_linked,Trip or tour distance (meters),numeric,"Trace distance for rMove trips, routed distance for online or manually added trips"
+processing,distance_miles,trip_linked,Trip or tour distance (miles),numeric,"Trace distance for rMove trips, routed distance for online or manually added trips"
+processing,duration_minutes,trip_linked,Trip duration (minutes),numeric,NA
+processing,dwell_mins,trip_linked,Dwell time spent at destination (minutes),numeric,NA
+processing,flag_speed,trip_linked,Flag: outlier for trip speed,integer/categorical,NA
+processing,flag_distance,trip_linked,Flag: outlier for trip distance,integer/categorical,NA
+processing,flag_duration,trip_linked,Flag: outlier for trip duration,integer/categorical,NA
+processing,o_tract_2020,trip_linked,Trip origin Census tract 2020,character,NA
+processing,d_tract_2020,trip_linked,Trip destination Census tract 2020,character,NA
+survey,hh_member_1,trip_linked,Household member 1 was on this trip,integer/categorical,NA
+survey,hh_member_2,trip_linked,Household member 2 was on this trip,integer/categorical,if household size > 1
+survey,hh_member_3,trip_linked,Household member 3 was on this trip,integer/categorical,if household size > 2
+survey,hh_member_4,trip_linked,Household member 4 was on this trip,integer/categorical,if household size > 3
+survey,hh_member_5,trip_linked,Household member 5 was on this trip,integer/categorical,if household size > 4
+survey,hh_member_6,trip_linked,Household member 6 was on this trip,integer/categorical,if household size > 5
+survey,hh_member_7,trip_linked,Household member 7 was on this trip,integer/categorical,if household size > 6
+survey,hh_member_8,trip_linked,Household member 8 was on this trip,integer/categorical,if household size > 7
+survey,hh_member_9,trip_linked,Household member 9 was on this trip,integer/categorical,if household size > 8
+survey,hh_member_10,trip_linked,Household member 10 was on this trip,integer/categorical,if household size > 9
+processing,o_purpose,trip_linked,Origin trip purpose (processed response),integer/categorical,NA
+processing,o_purpose_category,trip_linked,Origin trip purpose category (processed response),integer/categorical,NA
+processing,d_purpose,trip_linked,Destition trip purpose (processed response),integer/categorical,NA
+processing,d_purpose_category,trip_linked,Destition trip purpose category (processed response),integer/categorical,NA
+processing,n_legs,trip_linked,Number of legs,numeric,NA
+processing,leg_num,trip_linked,Leg number,numeric,NA
+processing,first_leg,trip_linked,First leg,integer/categorical,NA
+processing,last_leg,trip_linked,Last leg,integer/categorical,NA
+processing,linked_trip_id,trip_linked,Linked trip ID,numeric,NA
+processing,linked_trip_num,trip_linked,Linked trip number,numeric,NA
+processing,linked_trip_mode,trip_linked,Priority mode for linked trip,integer/categorical,NA
+processing,outbound,trip_linked,Linked trip direction (outbound or inbound relative to home location),integer/categorical,NA
+processing,joint_status,trip_linked,Is this a joint trip or tour with other hh members,integer/categorical,NA
+processing,linked_trip_weight,trip_linked,Priority mode for linked trip,numeric,NA
+processing,tour_id,trip_linked,Tour ID,numeric,NA
+processing,tour_num,trip_linked,Tour number,numeric,NA
+processing,trip_id,location,Trip ID,numeric,NA
+passive,collect_time,location,Time location was collected,datetime,NA
+passive,accuracy,location,"Radius of meters that the true location lies in, within a 68% confidence-level",numeric,NA
+passive,bearing,location,"Location bearing (direction of travel, in degrees)",numeric,NA
+passive,speed,location,Location speed (meters per second),numeric,NA
+passive,lat,location,Location latitude,numeric,If not in origin/destination tract
+passive,lon,location,Location longitude,numeric,If not in origin/destination tract
+processing,tract_2020,location,Location Census tract 2020,character,NA
