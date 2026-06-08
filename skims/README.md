@@ -24,8 +24,7 @@ Then run the notebooks in order:
 
 /data - This folder is ignored by git, so you will need to put the files needed to run the scripts here manually.  This includes the following files:
 
-- GTFS files downloaded from https://mobilitydatabase.org for CTA, Metra and Pace, corresponding to the dates
-  closest to April 2024.  
+- GTFS files downloaded from https://mobilitydatabase.org for CTA, Metra and Pace, in effect for April 2025.  Note the CTA file contains frequencies.txt, which is optional, but results in an error with r5py.  I deleteted this. 
 
 - tract_2020_district.csv - equivalency between 2020 Census tracts and RH_Zone.  Must include GEOID as the Census tract ID and RH_Zone as the 2020 TNP Pricing Zone -- Downtown, Tourist, Airport, Other or External.  External is outside the City of Chicago. Must also include lat-lon of Census tract centroid.  
 
