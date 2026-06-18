@@ -1,2 +1,8 @@
 data/
 out/
+
+# ignore biogeme outputs
+*.html
+*.pickle
+__mnl_mode_choice.iter
+biogeme.toml
